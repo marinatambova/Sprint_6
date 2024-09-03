@@ -1,4 +1,3 @@
-# pages/base_page.py
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -33,3 +32,6 @@ class BasePage:
             self.driver.execute_script("arguments[0].click();", cookie_button)
         except Exception:
             pass
+
+    def wait_for_page_load(self, url, timeout=30):
+        WebDriverWait(self.driver, timeout).until(lambda d: d.current_url == url)
