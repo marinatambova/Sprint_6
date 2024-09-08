@@ -21,9 +21,20 @@
 - `requirements.txt`: Содержит список зависимостей.
 - `pytest.ini`: Файл конфигурации для Pytest.
 
-## Установка зависимостей
+## Запуск проекта
 
 1. Клонируйте репозиторий:
+
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/marinatambova/Sprint_6.git
    cd Sprint_6
+   ```
+   
+2. Установите зависимости:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Запуск тестов выполняется по команде `pytest tests/` или `pytest --alluredir=allure_results`
+4. Просмотр отчетов в формате веб-страницы выполняется командой `allure serve allure_results`
